@@ -106,7 +106,7 @@
 
             </div>
             <div class="col-md-6">
-                <img src={{ asset('storage/image.png') }} class="img-fluid">
+                <img src={{ asset('image.png') }} class="img-fluid">
             </div>
         </div>
     </div>
