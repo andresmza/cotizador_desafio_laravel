@@ -3,10 +3,12 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
 
 class Cotizador extends Model
 {
+    private static $authToken = null;
     /**
      * Obtener el token de autenticación desde la API.
      *
@@ -14,16 +16,23 @@ class Cotizador extends Model
      */
     private static function getToken()
     {
-        $authResponse = Http::post('https://mexlv.epresis.com/api/v1/getDataUser.json', [
-            "tipo_tienda" => "vtex"
-        ]);
+        $authToken = Cache::get('authToken');
 
-        if ($authResponse->successful()) {
-            $authData = $authResponse->json('data');
-            return $authData[0]['token'];
-        } else {
-            return null;
+
+        if ($authToken === null) {
+            $authResponse = Http::post('https://mexlv.epresis.com/api/v1/getDataUser.json', [
+                "tipo_tienda" => "vtex"
+            ]);
+
+            if ($authResponse->successful()) {
+                $authData = $authResponse->json('data');
+                $authToken = $authData[0]['token'];
+
+                Cache::put('authToken', $authToken, now()->addMinutes(60));
+            }
         }
+
+        return $authToken;
     }
 
     /**
