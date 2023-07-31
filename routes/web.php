@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CotizadorController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [CotizadorController::class, 'index']);
+Route::get('cotizador', [CotizadorController::class, 'cotizar']);

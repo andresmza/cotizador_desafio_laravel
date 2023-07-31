@@ -1,0 +1,150 @@
+.btn-red {
+    border-radius: 20px;
+    background-color: #dc3545;
+    color: #ffffff;
+    width: 25%;
+    font-size: 1rem;
+    width: 150px;
+    white-space: nowrap;
+}
+
+.btn-red:hover {
+    background-color: #b02a37;
+    color: #ffffff;
+}
+
+.btn-login {
+    border-radius: 20px;
+    border-color: #dc3545;
+    border-width: 2px;
+    background-color: #fff;
+    color: #dc3545;
+    width: 25%;
+    font-size: 1rem;
+    width: 150px;
+    white-space: nowrap;
+}
+
+.font-rounded {
+    font-family: "Roboto", sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.text-secondary {
+    color: #6c757d;
+    font-size: 1.5rem;
+}
+
+.footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer img {
+    height: 20px;
+    margin-bottom: -5px;
+}
+
+.fixed-image {
+    position: fixed;
+    left: 10%;
+    bottom: 10%;
+    max-width: 150px;
+    height: auto;
+    z-index: 999;
+}
+
+.dots-container {
+    display: flex;
+    gap: 15px;
+    padding: 20px;
+}
+
+.col-md-6 img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.dot {
+    width: 5px;
+    height: 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+}
+
+.modal-dialog {
+    max-width: 40%;
+}
+
+.modal-content {
+    border-radius: 20px;
+}
+
+.m-title {
+    color: #000000;
+    margin-left: 5%;
+}
+
+.text-danger {
+    color: #DA2423;
+}
+
+hr {
+    border: 1px solid #ccc;
+}
+
+.btn-aceptar {
+    background-color: #DA2423;
+    color: #FFFFFF;
+}
+
+.btn-aceptar {
+    width: 120px;
+}
+
+.modal-header {
+    border: none;
+}
+
+.modal-body {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.modal-footer {
+    border: none;
+}
+
+.btn-modal {
+    border-radius: 20px;
+    background-color: #dc3545;
+    color: #ffffff;
+    width: 25%;
+    font-size: 1rem;
+}
+
+.btn-modal:hover {
+    background-color: #b02a37;
+    color: #ffffff;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: center;
+}
